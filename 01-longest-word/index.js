@@ -1,15 +1,19 @@
 const findLongestWord = (sentence) => {
-  const words = sentence.split(" ");
-  if (words.length === 1) {
-    return words[0];
-  }
-  let longest = "";
-  for (let index = 0; index < words.length; index++) {
-    if (words[index].length > longest.length) {
-      longest = words[index];
+  if (sentence && sentence.length) {
+    const words = sentence.split(" ");
+    if (words.length === 1) {
+      return words[0];
     }
+    let longest = "";
+    for (let index = 0; index < words.length; index++) {
+      if (words[index].length > longest.length) {
+        longest = words[index];
+      }
+    }
+    return longest;
+  } else {
+    return "Please, provide a valid sentence";
   }
-  return longest;
 };
 
 const sentences = [
