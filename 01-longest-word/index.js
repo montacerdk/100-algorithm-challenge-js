@@ -1,5 +1,5 @@
 const findLongestWord = (sentence) => {
-  if (sentence && sentence.length) {
+  if (typeof sentence === "string" && sentence.length) {
     const words = sentence.split(" ");
     if (words.length === 1) {
       return words[0];
@@ -11,9 +11,8 @@ const findLongestWord = (sentence) => {
       }
     }
     return longest;
-  } else {
-    return "Please, provide a valid sentence";
   }
+  return "Please, provide a valid sentence";
 };
 
 const sentences = [

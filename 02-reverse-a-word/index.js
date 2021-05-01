@@ -1,6 +1,6 @@
 const reverseStringUsingForLoop = (string) => {
   const wordLength = string.length;
-  if (string && wordLength) {
+  if (typeof string === "string" && wordLength) {
     if (wordLength === 1) {
       return string;
     }
@@ -9,20 +9,18 @@ const reverseStringUsingForLoop = (string) => {
       reversed += string[index];
     }
     return reversed;
-  } else {
-    return "Please, provide a valid string";
   }
+  return "Please, provide a valid string";
 };
 
 const reverseString = (string) => {
-  if (string && string.length) {
+  if (typeof string === "string" && string.length) {
     if (string.length === 1) {
       return string;
     }
     return string.split("").reverse().join("");
-  } else {
-    return "Please, provide a valid string";
   }
+  return "Please, provide a valid string";
 };
 
 const strings = ["Yezzitech", "mel", "la3b"];
